@@ -12,6 +12,7 @@ import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 import com.sankuai.waimai.router.components.DefaultLogger;
 import com.sankuai.waimai.router.components.DefaultOnCompleteListener;
 import com.sankuai.waimai.router.core.Debugger;
+import com.sankuai.waimai.router.demo.test.service.ServiceInit_test_lib1;
 
 /**
  * Created by jzj on 2018/3/19.
@@ -66,7 +67,7 @@ public class DemoApplication extends Application {
 
         // 初始化
         Router.init(rootHandler);
-
+//        ServiceInit_test_lib1.init();
         // 懒加载后台初始化（可选）
         new AsyncTask<Void, Void, Void>() {
             @Override
