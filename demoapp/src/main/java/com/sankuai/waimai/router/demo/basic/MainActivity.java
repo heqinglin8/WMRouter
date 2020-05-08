@@ -60,6 +60,9 @@ public class MainActivity extends BaseActivity {
 
             // 高级Demo页面
             DemoConstant.ADVANCED_DEMO,
+
+            DemoConstant.LIB1_SCHEME + "://" + DemoConstant.LIB1_HOST
+                    + DemoConstant.EXPORTED_PATH,
     };
 
     @Override

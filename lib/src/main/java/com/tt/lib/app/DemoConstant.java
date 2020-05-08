@@ -56,4 +56,7 @@ public class DemoConstant {
     public static final String TEST_DEMO_FRAGMENT_1 = "/fragment/demo_fragment_1";
     public static final String TEST_DEMO_FRAGMENT_2 = "/fragment/demo_fragment_2";
 
+    public static final String LIB1_SCHEME = "lib1_scheme";
+    public static final String LIB1_HOST = "lib1_host";
+
 }
