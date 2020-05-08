@@ -1,8 +1,8 @@
 package com.sankuai.waimai.router.demo.basic;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/3/26.

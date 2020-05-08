@@ -1,8 +1,8 @@
 package com.sankuai.waimai.router.demo.advanced.location;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * 附近商家，需要先定位

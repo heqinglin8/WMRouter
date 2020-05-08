@@ -13,9 +13,9 @@ import com.sankuai.waimai.router.common.DefaultUriRequest;
 import com.sankuai.waimai.router.core.OnCompleteListener;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
+import com.tt.lib.ToastUtils;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * 基本用法Demo

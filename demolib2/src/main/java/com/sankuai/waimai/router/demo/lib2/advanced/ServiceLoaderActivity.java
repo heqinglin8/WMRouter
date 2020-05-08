@@ -8,13 +8,13 @@ import android.widget.TextView;
 
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterUri;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.IAccountService;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.IFactoryService;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.LibraryModule;
 import com.sankuai.waimai.router.service.EmptyArgsFactory;
 import com.sankuai.waimai.router.service.IFactory;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
+import com.tt.lib.advanced.services.IAccountService;
+import com.tt.lib.advanced.services.IFactoryService;
+import com.tt.lib.advanced.services.LibraryModule;
 
 import java.util.List;
 

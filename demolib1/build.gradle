@@ -1,4 +1,11 @@
-apply plugin: 'com.android.library'
+//apply plugin: 'com.android.library'
+
+if(isRunAlone.toBoolean()){
+    apply plugin: 'com.android.application'
+    apply plugin: 'WMRouter'
+}else{
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 26
@@ -17,6 +24,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            if (isRunAlone.toBoolean()) {
+                manifest.srcFile 'src/main/runalone/AndroidManifest.xml'
+                java.srcDirs = ['src/main/java','src/main/runalone/java']
+                res.srcDirs = ['src/main/res','src/main/runalone/res']
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -27,6 +46,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    api project(path: ':demolib2')
+//    api project(path: ':demolib2')
+//    api project(path: ':router')
+    api project(path: ':lib')
     annotationProcessor project(path: ':compiler')
 }
+

@@ -8,7 +8,7 @@ import com.sankuai.waimai.router.core.UriCallback;
 import com.sankuai.waimai.router.core.UriHandler;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.core.UriResult;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.DemoConstant;
 
 @RouterUri(path = DemoConstant.SHOW_TOAST_HANDLER)
 public class ShowToastHandler extends UriHandler {

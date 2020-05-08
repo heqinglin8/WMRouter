@@ -1,4 +1,4 @@
-package com.sankuai.waimai.router.demo.lib2;
+package com.tt.lib;
 
 /**
  * 自定义的UriResultCode，为了避免冲突，自定义的建议用负数值

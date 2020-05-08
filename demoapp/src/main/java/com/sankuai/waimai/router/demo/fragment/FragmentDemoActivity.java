@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
 import com.sankuai.waimai.router.annotation.RouterUri;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by hailiangliao on 2017/12/13.

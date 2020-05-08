@@ -6,9 +6,9 @@ import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
 import com.sankuai.waimai.router.demo.R;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/3/27.

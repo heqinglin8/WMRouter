@@ -1,4 +1,4 @@
-package com.sankuai.waimai.router.demo.lib2;
+package com.tt.lib.app;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

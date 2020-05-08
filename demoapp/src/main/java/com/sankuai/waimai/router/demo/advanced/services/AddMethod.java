@@ -1,8 +1,8 @@
 package com.sankuai.waimai.router.demo.advanced.services;
 
 import com.sankuai.waimai.router.annotation.RouterService;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
 import com.sankuai.waimai.router.method.Func2;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/4/16.

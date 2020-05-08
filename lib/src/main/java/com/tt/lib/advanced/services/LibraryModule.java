@@ -1,4 +1,4 @@
-package com.sankuai.waimai.router.demo.lib2.advanced.services;
+package com.tt.lib.advanced.services;
 
 /**
  * Created by jzj on 2018/3/29.

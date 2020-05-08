@@ -8,11 +8,11 @@ import android.support.annotation.NonNull;
 import com.sankuai.waimai.router.core.UriCallback;
 import com.sankuai.waimai.router.core.UriInterceptor;
 import com.sankuai.waimai.router.core.UriRequest;
-import com.sankuai.waimai.router.demo.lib2.CustomUriResult;
-import com.sankuai.waimai.router.demo.lib2.DialogUtils;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.DemoServiceManager;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.ILocationService;
+import com.tt.lib.CustomUriResult;
+import com.tt.lib.DialogUtils;
+import com.tt.lib.ToastUtils;
+import com.tt.lib.advanced.services.DemoServiceManager;
+import com.tt.lib.advanced.services.ILocationService;
 
 /**
  * 用于定位的Interceptor

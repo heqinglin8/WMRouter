@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/3/19.

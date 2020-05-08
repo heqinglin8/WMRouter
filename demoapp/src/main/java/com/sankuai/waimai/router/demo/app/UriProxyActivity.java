@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import com.sankuai.waimai.router.common.DefaultUriRequest;
 import com.sankuai.waimai.router.core.OnCompleteListener;
 import com.sankuai.waimai.router.core.UriRequest;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
+import com.tt.lib.app.BaseActivity;
 
 /**
  * 接收所有外部跳转的ProxyActivity

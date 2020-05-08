@@ -8,7 +8,7 @@ import com.sankuai.waimai.router.core.UriCallback;
 import com.sankuai.waimai.router.core.UriHandler;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.core.UriResult;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/3/27.

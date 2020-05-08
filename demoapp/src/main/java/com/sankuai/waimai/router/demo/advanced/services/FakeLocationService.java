@@ -3,8 +3,8 @@ package com.sankuai.waimai.router.demo.advanced.services;
 import android.os.Handler;
 
 import com.sankuai.waimai.router.annotation.RouterService;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.ILocationService;
+import com.tt.lib.app.DemoConstant;
+import com.tt.lib.advanced.services.ILocationService;
 
 /**
  * Created by jzj on 2018/3/26.

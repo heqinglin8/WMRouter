@@ -7,9 +7,9 @@ import com.sankuai.waimai.router.core.UriCallback;
 import com.sankuai.waimai.router.core.UriInterceptor;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.core.UriResult;
-import com.sankuai.waimai.router.demo.lib2.CustomUriResult;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.DemoServiceManager;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.IAccountService;
+import com.tt.lib.CustomUriResult;
+import com.tt.lib.advanced.services.DemoServiceManager;
+import com.tt.lib.advanced.services.IAccountService;
 
 /**
  * Created by jzj on 2018/3/20.

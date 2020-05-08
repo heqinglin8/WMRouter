@@ -1,6 +1,6 @@
 package com.sankuai.waimai.router.demo.advanced.abtest;
 
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
+import com.tt.lib.app.BaseActivity;
 
 public class HomeActivityB extends BaseActivity {
 

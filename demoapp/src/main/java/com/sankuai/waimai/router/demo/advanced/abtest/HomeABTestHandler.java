@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import com.sankuai.waimai.router.activity.AbsActivityHandler;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.core.UriRequest;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.DemoConstant;
 
 @RouterUri(path = DemoConstant.HOME_AB_TEST)
 public class HomeABTestHandler extends AbsActivityHandler {

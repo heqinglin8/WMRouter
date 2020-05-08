@@ -6,8 +6,8 @@ import android.support.annotation.NonNull;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterProvider;
 import com.sankuai.waimai.router.annotation.RouterService;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.IAccountService;
+import com.tt.lib.advanced.services.IAccountService;
+import com.tt.lib.app.DemoConstant;
 
 import java.util.ArrayList;
 import java.util.List;

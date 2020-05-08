@@ -14,8 +14,8 @@ import android.widget.Toast;
 import com.sankuai.waimai.router.annotation.RouterRegex;
 import com.sankuai.waimai.router.common.UriParamInterceptor;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * WebView页面，显示网页

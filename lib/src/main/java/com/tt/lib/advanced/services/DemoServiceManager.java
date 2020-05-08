@@ -1,7 +1,7 @@
-package com.sankuai.waimai.router.demo.lib2.advanced.services;
+package com.tt.lib.advanced.services;
 
 import com.sankuai.waimai.router.Router;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * Created by jzj on 2018/4/19.

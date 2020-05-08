@@ -7,10 +7,10 @@ import android.widget.Button;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
-import com.sankuai.waimai.router.demo.lib2.advanced.services.DemoServiceManager;
+import com.tt.lib.ToastUtils;
+import com.tt.lib.advanced.services.DemoServiceManager;
+import com.tt.lib.app.BaseActivity;
+import com.tt.lib.app.DemoConstant;
 
 /**
  * 登录页

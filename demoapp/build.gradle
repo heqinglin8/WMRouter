@@ -42,7 +42,12 @@ dependencies {
     api 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
 
-    api project(path: ':demolib1')
-    api project(path: ':demokotlin')
     annotationProcessor project(path: ':compiler')
+    if (isRunAlone.toBoolean()) {//调试阶段，只保证基本逻辑不报错
+        implementation project(":lib")
+    } else {//打包阶段，才真正的引入业务逻辑模块
+        api project(path: ':demolib1')
+        api project(path: ':demolib2')
+        api project(path: ':demokotlin')
+    }
 }

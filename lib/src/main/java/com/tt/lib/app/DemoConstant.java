@@ -1,4 +1,4 @@
-package com.sankuai.waimai.router.demo.lib2;
+package com.tt.lib.app;
 
 /**
  * Created by jzj on 2018/4/19.

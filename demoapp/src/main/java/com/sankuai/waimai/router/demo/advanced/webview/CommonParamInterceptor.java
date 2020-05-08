@@ -7,8 +7,8 @@ import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.core.UriCallback;
 import com.sankuai.waimai.router.core.UriInterceptor;
 import com.sankuai.waimai.router.core.UriRequest;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
 import com.sankuai.waimai.router.utils.RouterUtils;
+import com.tt.lib.app.DemoConstant;
 
 import java.util.HashMap;
 

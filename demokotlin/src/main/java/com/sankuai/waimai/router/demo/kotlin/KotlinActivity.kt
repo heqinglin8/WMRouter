@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.widget.TextView
 import com.sankuai.waimai.router.Router
 import com.sankuai.waimai.router.annotation.RouterUri
-import com.sankuai.waimai.router.demo.lib2.BaseActivity
-import com.sankuai.waimai.router.demo.lib2.DemoConstant
+import com.tt.lib.app.BaseActivity
+import com.tt.lib.app.DemoConstant
 
 @RouterUri(path = [DemoConstant.KOTLIN])
 class KotlinActivity : BaseActivity() {
