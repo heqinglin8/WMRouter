@@ -33,6 +33,9 @@ android {
                 res.srcDirs = ['src/main/res','src/main/runalone/res']
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude 'runalone/**' //打包的时候，不想包含文件的路径
+                }
             }
         }
     }
