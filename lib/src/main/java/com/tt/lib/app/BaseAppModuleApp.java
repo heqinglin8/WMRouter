@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterProvider;
 import com.sankuai.waimai.router.annotation.RouterService;
@@ -32,6 +33,8 @@ public class BaseAppModuleApp extends Application {
         sApplication = this;
         super.onCreate();
         initRouter(this);
+
+        LiveEventBus.config().supportBroadcast(this);
     }
 
     public static Context getContext() {

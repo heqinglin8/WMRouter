@@ -50,5 +50,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     api project(path: ':lib')
     annotationProcessor project(path: ':compiler')
+    implementation 'com.jeremyliao:live-event-bus:1.5.7'
+    implementation 'com.jeremyliao:smart-event-bus-base:0.0.1'
+    annotationProcessor 'com.jeremyliao:smart-event-bus-compiler:0.0.2'
 }
 

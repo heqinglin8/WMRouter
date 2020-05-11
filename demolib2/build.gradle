@@ -49,4 +49,8 @@ dependencies {
 
     annotationProcessor project(path: ':compiler')
     api project(path: ':lib')
+
+    implementation 'com.jeremyliao:live-event-bus:1.5.7'
+    implementation 'com.jeremyliao:smart-event-bus-base:0.0.1'
+    annotationProcessor 'com.jeremyliao:smart-event-bus-compiler:0.0.2'
 }
