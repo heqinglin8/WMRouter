@@ -5,7 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.jeremyliao.liveeventbus.LiveEventBus;
+//import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterProvider;
 import com.sankuai.waimai.router.annotation.RouterService;
@@ -13,6 +13,7 @@ import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 import com.sankuai.waimai.router.components.DefaultLogger;
 import com.sankuai.waimai.router.components.DefaultOnCompleteListener;
 import com.sankuai.waimai.router.core.Debugger;
+import com.tt52.moduleevent.LiveEventBus;
 
 /**
  * Created by jzj on 2018/3/19.
@@ -34,7 +35,7 @@ public class BaseAppModuleApp extends Application {
         super.onCreate();
         initRouter(this);
 
-        LiveEventBus.config().supportBroadcast(this);
+//        LiveEventBus.config().supportBroadcast(this);
     }
 
     public static Context getContext() {

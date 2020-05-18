@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jeremyliao.liveeventbus.LiveEventBus;
+import com.tt52.moduleevent.LiveEventBus;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.lib2.R;
 import com.tt.lib.app.BaseActivity;
@@ -32,6 +32,7 @@ public class DemoLibActivity2 extends BaseActivity {
     }
 
     private void registerRecieve(){
+        LiveEventBus.get(EventConstant.TEST_BRC_KEY).post("app 内的消息");
         LiveEventBus.get(EventConstant.TEST_BRC_KEY, String.class).observe(this, new Observer<String>() {
                     @Override
                     public void onChanged(@Nullable String s) {

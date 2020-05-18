@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.lib1.R;
 import com.tt.lib.app.BaseActivity;
 import com.tt.lib.app.DemoConstant;
 import com.tt.lib.constant.EventConstant;
+import com.tt52.moduleevent.LiveEventBus;
 
 /**
  * Created by jzj on 2018/3/29.
@@ -34,6 +34,6 @@ public class DemoLibActivity1 extends BaseActivity {
     }
 
     public void sendBroadcastMsg(View v) {
-        LiveEventBus.get(EventConstant.TEST_BRC_KEY).broadcast("msg from liveeventbus");
+        LiveEventBus.get(EventConstant.TEST_BRC_KEY).postAcrossApp("msg from liveeventbus");
     }
 }
