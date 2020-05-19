@@ -16,7 +16,7 @@
          android:id="@+id/sendipc"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="跨进程发消息"/>
+         android:text="跨App发消息"/>
  </LinearLayout>
 
 </ScrollView>

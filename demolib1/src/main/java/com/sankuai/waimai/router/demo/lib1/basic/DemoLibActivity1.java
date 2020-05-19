@@ -46,6 +46,6 @@ public class DemoLibActivity1 extends BaseActivity {
     }
 
     public void sendBroadcastMsg(View v) {
-        Demolib2EventsManager.EVENT3().postAcrossProcess("跨进程来的消息");
+        Demolib2EventsManager.EVENT3().postAcrossApp("Demo1发来的");
     }
 }

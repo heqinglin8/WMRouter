@@ -15,6 +15,7 @@ import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.lib2.R;
 import com.tt.lib.app.BaseActivity;
 import com.tt.lib.app.DemoConstant;
+import com.tt52.demolib2_export.Demolib2EventsManager;
 
 /**
  * Created by jzj on 2018/3/29.
@@ -28,10 +29,17 @@ public class DemoLibActivity2 extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.e("mainactivity》》","启动服务"+startService(new Intent(DemoLibActivity2.this, IpcService.class)));
+
         recieveipc = findViewById(R.id.recieveipc);
         recieveipc.setText("收到：");
-        Intent intent = new Intent(DemoLibActivity2.this, IpcService.class);
-        Log.e("mainactivity》》","启动服务"+startService(intent));
+        Button start = findViewById(R.id.start);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Demolib2EventsManager.EVENT3().post("内部消息");
+            }
+        });
     }
 
 }
