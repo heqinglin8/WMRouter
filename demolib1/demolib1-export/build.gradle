@@ -25,10 +25,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:26.1.0'
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    api project(path: ':router')
-    annotationProcessor project(path: ':compiler')
+    implementation 'com.github.heqinglin8.ModuleEvent:moduleevent:tag-1.0.8'
+    implementation 'com.github.heqinglin8.ModuleEvent:interfaces:tag-1.0.8'
+    annotationProcessor 'com.github.heqinglin8.ModuleEvent:compiler:tag-1.0.8'
 }
