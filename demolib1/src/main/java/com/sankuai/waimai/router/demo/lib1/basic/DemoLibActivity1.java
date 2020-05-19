@@ -12,10 +12,8 @@ import com.sankuai.waimai.router.demo.lib1.R;
 import com.tt.lib.ToastUtils;
 import com.tt.lib.app.BaseActivity;
 import com.tt.lib.app.DemoConstant;
-import com.tt.lib.constant.EventConstant;
-import com.tt52.demolib1_export.bean.HelloWorldEvent;
-import com.tt52.module1_export.event.Module1EventsManager;
-import com.tt52.moduleevent.LiveEventBus;
+import com.tt52.demolib2_export.Demolib2EventsManager;
+import com.tt52.demolib2_export.bean.HelloWorldEvent;
 
 /**
  * Created by jzj on 2018/3/29.
@@ -27,7 +25,16 @@ public class DemoLibActivity1 extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView send = findViewById(R.id.sendipc);
         TextView sendipc = findViewById(R.id.sendipc);
+        send.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Demolib2EventsManager.EVENT1().postAcrossApp(new HelloWorldEvent("heqinglin",null));
+            }
+        });
+
         sendipc.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -36,15 +43,9 @@ public class DemoLibActivity1 extends BaseActivity {
             }
         });
 
-        Module1EventsManager.EVENT1().observe(this, new Observer<HelloWorldEvent>() {
-            @Override
-            public void onChanged(@Nullable HelloWorldEvent helloWorldEvent) {
-                ToastUtils.showToast(DemoLibActivity1.this,helloWorldEvent.name);
-            }
-        });
     }
 
     public void sendBroadcastMsg(View v) {
-        Module1EventsManager.EVENT1().postAcrossApp(new HelloWorldEvent("heqinglin",null));
+        Demolib2EventsManager.EVENT3().postAcrossProcess("跨进程来的消息");
     }
 }

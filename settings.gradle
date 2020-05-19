@@ -1,2 +1,3 @@
 include ':interfaces', ':router', ':compiler', ':plugin', ':demoapp', ':demolib1', ':demolib2', ':demokotlin',':lib'
 include ':demolib1:demolib1-export'
+include ':demolib2:demolib2-export'

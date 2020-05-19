@@ -1,15 +1,14 @@
-package com.tt52.demolib1_export.event;
+package com.tt52.demolib2_export.event;
 
-
-import com.tt52.demolib1_export.bean.HelloWorldEvent;
-import com.tt52.demolib1_export.bean.TestEventBean;
+import com.tt52.demolib2_export.bean.HelloWorldEvent;
+import com.tt52.demolib2_export.bean.TestEventBean;
 import com.tt52.moduleevent.interfaces.annotation.EventType;
 import com.tt52.moduleevent.interfaces.annotation.ModuleEvents;
 
 /**
  * Created by liaohailiang on 2019-08-30.
  */
-@ModuleEvents(packageName = "com.tt52.module1_export.event",moduleName = "com.tt52.module1.event")
+@ModuleEvents(packageName = "com.tt52.demolib2_export",moduleName = "com.tt52.demolib2", busName = "Demolib2EventsManager")
 public class Module2Events {
 
     //不指定消息类型，那么消息的类型默认为Object
@@ -25,6 +24,6 @@ public class Module2Events {
     public static final String EVENT3 = "event3";
 
     //不指定消息类型，那么消息的类型默认为Object
-    public static final String EVENT4 = "event1";
+    public static final String EVENT4 = "event4";
 
 }

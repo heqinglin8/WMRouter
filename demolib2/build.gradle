@@ -53,4 +53,6 @@ dependencies {
     implementation 'com.github.heqinglin8.ModuleEvent:moduleevent:tag-1.0.8'
     implementation 'com.github.heqinglin8.ModuleEvent:interfaces:tag-1.0.8'
     annotationProcessor 'com.github.heqinglin8.ModuleEvent:compiler:tag-1.0.8'
+
+    implementation project(':demolib2:demolib2-export')
 }

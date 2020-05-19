@@ -13,7 +13,6 @@ import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 import com.sankuai.waimai.router.components.DefaultLogger;
 import com.sankuai.waimai.router.components.DefaultOnCompleteListener;
 import com.sankuai.waimai.router.core.Debugger;
-//import com.tt52.moduleevent.LiveEventBus;
 
 /**
  * Created by jzj on 2018/3/19.
@@ -34,8 +33,6 @@ public class BaseAppModuleApp extends Application {
         sApplication = this;
         super.onCreate();
         initRouter(this);
-
-//        LiveEventBus.config().supportBroadcast(this);
     }
 
     public static Context getContext() {

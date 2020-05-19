@@ -9,7 +9,7 @@ import com.tt52.moduleevent.interfaces.annotation.ModuleEvents;
 /**
  * Created by liaohailiang on 2019-08-30.
  */
-@ModuleEvents(packageName = "com.tt52.module1_export.event",moduleName = "com.tt52.module1.event", busName = "Module1EventsManager")
+@ModuleEvents(packageName = "com.tt52.demolib1_export",moduleName = "com.tt52.demolib1", busName = "Demolib1EventsManager")
 public class Module1Events {
 
     //不指定消息类型，那么消息的类型默认为Object
@@ -25,6 +25,6 @@ public class Module1Events {
     public static final String EVENT3 = "event3";
 
     //不指定消息类型，那么消息的类型默认为Object
-    public static final String EVENT4 = "event1";
+    public static final String EVENT4 = "event4";
 
 }
