@@ -5,7 +5,6 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 
-//import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterProvider;
 import com.sankuai.waimai.router.annotation.RouterService;
