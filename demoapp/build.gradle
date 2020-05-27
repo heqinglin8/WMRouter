@@ -50,4 +50,6 @@ dependencies {
         api project(path: ':demolib2')
         api project(path: ':demokotlin')
     }
+    //加入Flutter的依赖
+//    implementation project(':flutter')
 }

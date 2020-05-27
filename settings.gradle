@@ -1,3 +1,11 @@
+import javax.naming.Binding
+
 include ':interfaces', ':router', ':compiler', ':plugin', ':demoapp', ':demolib1', ':demolib2', ':demokotlin',':lib'
 include ':demolib1:demolib1-export'
 include ':demolib2:demolib2-export'
+
+//setBinding(new Binding([gradle: this]))                                // new
+//evaluate(new File(                                                     // new
+//        settingsDir.parentFile,                                              // new
+//        'flutter_module/.android/include_flutter.groovy'                         // new
+//))

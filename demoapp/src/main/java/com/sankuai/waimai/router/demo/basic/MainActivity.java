@@ -63,6 +63,9 @@ public class MainActivity extends BaseActivity {
 
             DemoConstant.LIB1_SCHEME + "://" + DemoConstant.LIB1_HOST
                     + DemoConstant.EXPORTED_PATH,
+
+            DemoConstant.FLUTTER_MAIN,
+
     };
 
     @Override
@@ -107,6 +110,8 @@ public class MainActivity extends BaseActivity {
                         }
                     })
                     .start();
+        }else if(DemoConstant.FLUTTER_MAIN.equals(uri)){
+//            FlutterActivity.createDefaultIntent(this);
         } else {
             Router.startUri(this, uri);
         }

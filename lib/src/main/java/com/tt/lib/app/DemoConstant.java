@@ -59,4 +59,6 @@ public class DemoConstant {
     public static final String LIB1_SCHEME = "lib1_scheme";
     public static final String LIB1_HOST = "lib1_host";
 
+    public static final String FLUTTER_MAIN = "flutter_main";
+
 }
