@@ -40,8 +40,6 @@
         <activity android:name=".basic.ExportedActivity" />
         <activity android:name=".basic.NotExportedActivity" />
         <activity android:name=".advanced.AdvancedDemoActivity" />
-        <activity android:name=".advanced.account.LoginActivity" />
-        <activity android:name=".advanced.account.UserAccountActivity" />
         <activity android:name=".advanced.location.NearbyShopActivity" />
         <activity android:name=".advanced.webview.WebViewActivity" />
         <activity android:name=".advanced.abtest.HomeActivityA" />
@@ -49,13 +47,13 @@
         <activity android:name=".fragment.FragmentDemoActivity" />
         <activity android:name=".fragment2fragment.FragmentToFragmentDemoActivity"/>
 
-        <activity
-            android:name="io.flutter.embedding.android.FlutterActivity"
-            android:theme="@style/LaunchTheme"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-            android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize"
-            />
+<!--        <activity-->
+<!--            android:name="io.flutter.embedding.android.FlutterActivity"-->
+<!--            android:theme="@style/LaunchTheme"-->
+<!--            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            />-->
     </application>
 
 </manifest>

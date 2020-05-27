@@ -1,4 +1,4 @@
-package com.sankuai.waimai.router.demo.advanced.services;
+package com.tt52.usermodlue.services;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

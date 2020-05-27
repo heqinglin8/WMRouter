@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tt52.usermodlue">
+
+    <application>
+        <activity android:name="com.tt52.usermodlue.LoginActivity" />
+        <activity android:name="com.tt52.usermodlue.UserAccountActivity" />
+    </application>
+
+</manifest>
