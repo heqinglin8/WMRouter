@@ -1,8 +1,8 @@
 package com.sankuai.waimai.router.demo.lib1.basic;
 
-import android.arch.lifecycle.Observer;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.tt.lib.ToastUtils;

@@ -1,10 +1,11 @@
 package com.sankuai.waimai.router.demo.lib2.service;
 
 import android.app.Service;
-import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
+
 import android.util.Log;
 import android.widget.Toast;
 

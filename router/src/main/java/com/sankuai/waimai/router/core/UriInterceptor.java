@@ -1,6 +1,7 @@
 package com.sankuai.waimai.router.core;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 /**
  * 拦截URI跳转并做处理，支持异步操作。

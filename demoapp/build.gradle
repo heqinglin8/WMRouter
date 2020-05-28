@@ -5,14 +5,16 @@ apply plugin: 'WMRouter'
 //WMRouter {
 //    enableDebug = true // 调试开关
 //}
-
+apply from: '../deps.gradle'
 android {
-    compileSdkVersion 26
+
+    compileSdkVersion build_versions.compile_sdk_version
+    buildToolsVersion build_versions.build_tools
 
     defaultConfig {
         applicationId "com.sankuai.waimai.router.demo"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
     }
@@ -39,7 +41,7 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:26.1.0'
+    api deps.support.app_compat
     testImplementation 'junit:junit:4.12'
 
     annotationProcessor project(path: ':compiler')
