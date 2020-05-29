@@ -41,7 +41,7 @@ public class Demo1Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_demo_1, container, false);
+        View v = inflater.inflate(R.layout.host_fragment_demo_1, container, false);
         //测试Fragment
         v.findViewById(R.id.btn_jump).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -41,7 +41,7 @@ public interface ActivityLauncher {
      * 设置 {@link ActivityOptions}，{@link Bundle} 类型
      *
      * @see ActivityOptions
-     * @see ActivityOptionsCompat
+     * @see androidx.core.app.ActivityOptionsCompat
      */
     String FIELD_START_ACTIVITY_OPTIONS = _PKG + "options";
 

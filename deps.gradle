@@ -32,4 +32,13 @@ def lifecycle = [:]
 lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:2.1.0"
 deps.lifecycle = lifecycle
 
+def resourcePrefix = [:]
+resourcePrefix.host = "host_"
+resourcePrefix.demolib1 = "demolib1_"
+resourcePrefix.demolib2 = "demolib2_"
+resourcePrefix.demokotlin = "demokotlin_"
+resourcePrefix.usermodule = "usermodule_"
+deps.resourcePrefix = resourcePrefix
+
+
 ext.deps = deps

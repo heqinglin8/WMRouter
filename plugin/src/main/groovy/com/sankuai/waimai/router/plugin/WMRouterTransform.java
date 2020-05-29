@@ -70,7 +70,6 @@ public class WMRouterTransform extends Transform {
     public void transform(TransformInvocation invocation) {
         WMRouterLogger.info(TRANSFORM + "start...");
         long ms = System.currentTimeMillis();
-        System.out.println("hql" + "transform start");
         Set<String> initClasses = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
         for (TransformInput input : invocation.getInputs()) {
@@ -113,11 +112,9 @@ public class WMRouterTransform extends Transform {
     private void scanJarFile(File file, Set<String> initClasses) throws IOException {
         JarFile jarFile = new JarFile(file);
         Enumeration<JarEntry> entries = jarFile.entries();
-        WMRouterLogger.info("hql scanJarFile entries: %s", entries.toString());
         while (entries.hasMoreElements()) {
             JarEntry entry = entries.nextElement();
             String name = entry.getName();
-            WMRouterLogger.info("hql scanJarFile name: %s", name);
             if (name.endsWith(SdkConstants.DOT_CLASS) && name.startsWith(INIT_SERVICE_PATH)) {
                 String className = trimName(name, 0).replace('/', '.');
                 initClasses.add(className);

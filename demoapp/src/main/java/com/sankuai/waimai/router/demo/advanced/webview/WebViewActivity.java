@@ -32,7 +32,7 @@ public class WebViewActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.host_activity_webview);
         mWebView = findViewById(R.id.webview);
         mProgressBar = findViewById(R.id.progressBar);
 

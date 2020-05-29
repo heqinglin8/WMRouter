@@ -24,12 +24,5 @@ public class DemoLibActivity2 extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Demolib2EventsManager.EVENT1().observe(this, new Observer<HelloWorldEvent>() {
-            @Override
-            public void onChanged(@Nullable HelloWorldEvent helloWorldEvent) {
-                ToastUtils.showToast(DemoLibActivity2.this,helloWorldEvent.name);
-            }
-        });
     }
 }

@@ -18,7 +18,7 @@ public class FragmentToFragmentDemoActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.host_activity_fragment);
         launchFragment();
     }
 

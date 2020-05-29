@@ -13,6 +13,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //强制前缀
+        resourcePrefix deps.resourcePrefix.demokotlin
     }
 
     buildTypes {

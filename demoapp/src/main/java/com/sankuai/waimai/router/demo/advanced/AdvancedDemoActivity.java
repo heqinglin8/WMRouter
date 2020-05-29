@@ -45,7 +45,7 @@ public class AdvancedDemoActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.host_activity_main);
 
         LinearLayout container = findViewById(R.id.layout_container);
         for (final String uri : URIS) {

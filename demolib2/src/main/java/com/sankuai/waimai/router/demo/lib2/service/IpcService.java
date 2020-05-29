@@ -21,7 +21,6 @@ public class IpcService extends Service {
         super.onCreate();
         Demolib2EventsManager.EVENT3().observeForever(observer2);
         Demolib2EventsManager.EVENT3().postAcrossApp("准备就绪！");
-        Log.e("hql","IpcService onCreate");
     }
 
     @Override

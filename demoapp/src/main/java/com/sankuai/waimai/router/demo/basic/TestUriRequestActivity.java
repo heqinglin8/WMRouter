@@ -22,7 +22,7 @@ public class TestUriRequestActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text);
+        setContentView(R.layout.host_activity_text);
 
         TextView text = findViewById(R.id.text);
 

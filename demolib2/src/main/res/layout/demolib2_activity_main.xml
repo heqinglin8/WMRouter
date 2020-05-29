@@ -8,10 +8,10 @@
      android:orientation="vertical"
      >
      <Button
-         android:id="@+id/start"
+         android:id="@+id/tolib1"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="start"/>
+         android:text="tolib1"/>
     <TextView
         android:id="@+id/recieveipc"
         android:layout_width="wrap_content"
