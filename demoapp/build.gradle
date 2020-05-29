@@ -51,6 +51,7 @@ dependencies {
         api project(path: ':demolib1')
         api project(path: ':demolib2')
         api project(path: ':demokotlin')
+        api project(path: ':usermodule')
     }
     //加入Flutter的依赖
 //    implementation project(':flutter')

@@ -25,6 +25,7 @@ dependencies {
 
     api deps.support.v4
     api deps.support.annotations
+
     testImplementation 'junit:junit:4.12'
     testImplementation "org.robolectric:robolectric:3.5.1"
     api project(':interfaces')
