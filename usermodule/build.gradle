@@ -8,7 +8,6 @@ if(isRunAlone.toBoolean()){
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-apply from: '../deps.gradle'
 android {
     compileSdkVersion build_versions.compile_sdk_version
     buildToolsVersion build_versions.build_tools
