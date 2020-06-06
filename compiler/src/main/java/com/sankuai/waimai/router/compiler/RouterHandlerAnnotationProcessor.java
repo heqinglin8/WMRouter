@@ -89,18 +89,18 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
                             url = routerUri.scheme()+"://" + url;
                         }
                     }
-                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.className(),url,routerUri.remark());
+                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
                 }
             }else if(uri instanceof RouterPage){
                 RouterPage routerUri = (RouterPage) uri;
                 String[] pathList = routerUri.path();
                 for (String path : pathList) {
                    String url = PAGE_SCHEME_HOST + path;
-                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.className(),url,routerUri.remark());
+                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
                 }
             }else if(uri instanceof RouterRegex){
                 RouterRegex routerUri = (RouterRegex) uri;
-                builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.className(),routerUri.regex(),routerUri.remark());
+                builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), routerUri.regex(),routerUri.remark());
             }
 
         }
