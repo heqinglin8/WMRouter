@@ -1,7 +1,7 @@
 package com.sankuai.waimai.router.demo.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.sankuai.waimai.router.demo.R;
 import com.sankuai.waimai.router.annotation.RouterUri;
@@ -17,7 +17,7 @@ public class FragmentDemoActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.host_activity_fragment);
         launchFragment();
     }
 

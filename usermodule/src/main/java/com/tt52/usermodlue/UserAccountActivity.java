@@ -1,7 +1,7 @@
 package com.tt52.usermodlue;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,7 +24,7 @@ public class UserAccountActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("我的账户");
-        setContentView(R.layout.activity_button);
+        setContentView(R.layout.usermodule_activity_button);
         Button button = findViewById(R.id.button);
         button.setText("退出登录");
         button.setOnClickListener(new View.OnClickListener() {

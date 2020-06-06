@@ -1,9 +1,9 @@
 import javax.naming.Binding
 
 include ':interfaces', ':router', ':compiler', ':plugin', ':demoapp', ':demolib1', ':demolib2', ':demokotlin',':lib'
-include ':demolib1:demolib1-export'
-include ':demolib2:demolib2-export'
-include ':usermodlue'
+include ':export:demolib1-export'
+include ':export:demolib2-export'
+include ':usermodule'
 
 //setBinding(new Binding([gradle: this]))                                // new
 //evaluate(new File(                                                     // new

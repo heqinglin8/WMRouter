@@ -3,7 +3,8 @@ package com.sankuai.waimai.router.activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.sankuai.waimai.router.core.UriRequest;
 

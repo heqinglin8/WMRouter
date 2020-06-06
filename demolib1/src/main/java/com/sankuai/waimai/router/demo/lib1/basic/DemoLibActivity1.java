@@ -1,7 +1,7 @@
 package com.sankuai.waimai.router.demo.lib1.basic;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,9 +21,9 @@ public class DemoLibActivity1 extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.demolib1_activity_main);
 
-        TextView send = findViewById(R.id.sendipc);
+        TextView send = findViewById(R.id.send);
         TextView sendipc = findViewById(R.id.sendipc);
         send.setOnClickListener(new View.OnClickListener(){
 

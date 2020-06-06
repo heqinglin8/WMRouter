@@ -2,7 +2,7 @@ package com.sankuai.waimai.router.demo.basic;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.TextView;
 
 import com.sankuai.waimai.router.annotation.RouterUri;
@@ -22,7 +22,7 @@ public class TestUriRequestActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text);
+        setContentView(R.layout.host_activity_text);
 
         TextView text = findViewById(R.id.text);
 

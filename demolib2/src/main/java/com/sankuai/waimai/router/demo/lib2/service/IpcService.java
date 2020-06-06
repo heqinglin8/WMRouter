@@ -1,10 +1,11 @@
 package com.sankuai.waimai.router.demo.lib2.service;
 
 import android.app.Service;
-import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
+
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,7 +21,6 @@ public class IpcService extends Service {
         super.onCreate();
         Demolib2EventsManager.EVENT3().observeForever(observer2);
         Demolib2EventsManager.EVENT3().postAcrossApp("准备就绪！");
-        Log.e("hql","IpcService onCreate");
     }
 
     @Override

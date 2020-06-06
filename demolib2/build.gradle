@@ -6,14 +6,18 @@ if(isRunAlone.toBoolean()){
 }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion build_versions.compile_sdk_version
+    buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //强制前缀
+        resourcePrefix deps.resourcePrefix.demolib2
     }
 
     buildTypes {
@@ -42,7 +46,7 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
-    api 'com.android.support:appcompat-v7:26.1.0'
+    api deps.support.app_compat
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
@@ -50,9 +54,12 @@ dependencies {
     annotationProcessor project(path: ':compiler')
     api project(path: ':lib')
 
-    implementation 'com.github.heqinglin8.ModuleEvent:moduleevent:tag-1.0.8'
-    implementation 'com.github.heqinglin8.ModuleEvent:interfaces:tag-1.0.8'
-    annotationProcessor 'com.github.heqinglin8.ModuleEvent:compiler:tag-1.0.8'
+//    implementation deps.moduleevent.moduleevent
+    implementation (deps.moduleevent.moduleevent){
+        exclude group: 'androidx.lifecycle'
+    }
+    implementation deps.moduleevent.interfaces
+    annotationProcessor deps.moduleevent.compiler
 
-    implementation project(':demolib2:demolib2-export')
+    implementation project(':export:demolib2-export')
 }

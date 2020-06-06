@@ -3,5 +3,9 @@
     <application>
         <activity android:name=".basic.DemoLibActivity2"/>
         <activity android:name=".advanced.ServiceLoaderActivity"/>
+        <service
+            android:name="com.sankuai.waimai.router.demo.lib2.service.IpcService"
+            android:process=":ipcTest">
+        </service>
     </application>
 </manifest>

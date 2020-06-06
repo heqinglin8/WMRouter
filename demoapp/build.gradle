@@ -7,14 +7,18 @@ apply plugin: 'WMRouter'
 //}
 
 android {
-    compileSdkVersion 26
+
+    compileSdkVersion build_versions.compile_sdk_version
+    buildToolsVersion build_versions.build_tools
 
     defaultConfig {
         applicationId "com.sankuai.waimai.router.demo"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
+        //强制前缀
+        resourcePrefix deps.resourcePrefix.host
     }
     signingConfigs {
         testKey {
@@ -39,8 +43,10 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:26.1.0'
+    api deps.support.app_compat
     testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     annotationProcessor project(path: ':compiler')
     if (isRunAlone.toBoolean()) {//调试阶段，只保证基本逻辑不报错
@@ -49,6 +55,7 @@ dependencies {
         api project(path: ':demolib1')
         api project(path: ':demolib2')
         api project(path: ':demokotlin')
+        api project(path: ':usermodule')
     }
     //加入Flutter的依赖
 //    implementation project(':flutter')

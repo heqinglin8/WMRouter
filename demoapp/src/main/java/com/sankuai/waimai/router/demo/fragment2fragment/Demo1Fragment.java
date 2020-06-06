@@ -2,9 +2,9 @@ package com.sankuai.waimai.router.demo.fragment2fragment;
 
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +41,7 @@ public class Demo1Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_demo_1, container, false);
+        View v = inflater.inflate(R.layout.host_fragment_demo_1, container, false);
         //测试Fragment
         v.findViewById(R.id.btn_jump).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,6 @@
 package com.sankuai.waimai.router.core;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.sankuai.waimai.router.interfaces.Const;

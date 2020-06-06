@@ -70,7 +70,6 @@ public class WMRouterTransform extends Transform {
     public void transform(TransformInvocation invocation) {
         WMRouterLogger.info(TRANSFORM + "start...");
         long ms = System.currentTimeMillis();
-
         Set<String> initClasses = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
         for (TransformInput input : invocation.getInputs()) {

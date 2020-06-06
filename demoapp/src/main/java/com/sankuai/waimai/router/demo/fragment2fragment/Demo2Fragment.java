@@ -2,9 +2,9 @@ package com.sankuai.waimai.router.demo.fragment2fragment;
 
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +40,7 @@ public class Demo2Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_demo_2, container, false);
+        View v = inflater.inflate(R.layout.host_fragment_demo_2, container, false);
         String message = getArguments().getString("message","");
         TextView textView = v.findViewById(R.id.text_message);
         textView.setText("get msg:" + message);
@@ -52,7 +52,7 @@ public class Demo2Fragment extends Fragment {
                         .activityRequestCode(100)
                         .putExtra(TestUriRequestActivity.INTENT_TEST_INT, 1)
                         .putExtra(TestUriRequestActivity.INTENT_TEST_STR, "str")
-                        .overridePendingTransition(R.anim.enter_activity, R.anim.exit_activity)
+                        .overridePendingTransition(R.anim.host_enter_activity, R.anim.host_exit_activity)
                         .onComplete(new OnCompleteListener() {
                             @Override
                             public void onSuccess(@NonNull UriRequest request) {
