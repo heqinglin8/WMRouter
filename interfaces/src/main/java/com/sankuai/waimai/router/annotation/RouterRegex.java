@@ -33,4 +33,10 @@ public @interface RouterRegex {
      * 要添加的interceptors
      */
     Class[] interceptors() default {};
+
+    /**
+     * remark
+     */
+    String remark() default "";
+
 }
