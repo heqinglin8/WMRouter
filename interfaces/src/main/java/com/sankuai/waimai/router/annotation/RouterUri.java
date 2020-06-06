@@ -38,4 +38,9 @@ public @interface RouterUri {
      * 要添加的interceptors
      */
     Class[] interceptors() default {};
+
+    /**
+     * remark
+     */
+    String remark() default "";
 }
