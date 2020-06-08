@@ -17,8 +17,7 @@ import com.sun.tools.javac.code.Symbol;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import javax.annotation.processing.Processor;
@@ -48,8 +47,11 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
         // list泛型的类型
         ClassName type = ClassName.get(ROUTER_HANDLER_CLASS, URL_MODE_CLASS_NAME);
 
-        CodeBlock.Builder builder = initCodeBlock(env,RouterUri.class,type);
-        buildHandlerHandlerClass(builder.build(), ROUTER_HANDLER_CLASS_NAME,type);
+        CodeBlock.Builder builder = CodeBlock.builder();
+        builder.add(initCodeBlock(env, RouterUri.class,type).build());
+        builder.add(initCodeBlock(env, RouterPage.class,type).build());
+        builder.add(initCodeBlock(env, RouterRegex.class,type).build());
+        buildHandlerClass(builder.build(), ROUTER_HANDLER_CLASS_NAME,type);
         return true;
     }
 
@@ -59,19 +61,20 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
             if (!(element instanceof Symbol.ClassSymbol)) {
                 continue;
             }
+            System.out.println("hql initCodeBlock:"+routerUriClass);
             boolean isActivity = isActivity(element);
             boolean isHandler = isHandler(element);
 
             if (!isActivity && !isHandler) {
                 continue;
             }
-
+            System.out.println("hql initCodeBlock 111");
             Symbol.ClassSymbol cls = (Symbol.ClassSymbol) element;
             T uri = cls.getAnnotation(routerUriClass);
             if (uri == null) {
                 continue;
             }
-
+            System.out.println("hql initCodeBlock 222");
             // scheme, host, path, handler, exported, interceptors
             //"demo://demo/account"
             if(uri instanceof RouterUri){
@@ -92,15 +95,17 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
                     builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
                 }
             }else if(uri instanceof RouterPage){
-                RouterPage routerUri = (RouterPage) uri;
-                String[] pathList = routerUri.path();
+                RouterPage routerPage = (RouterPage) uri;
+                System.out.println("hql initCodeBlock 333 ");
+                String[] pathList = routerPage.path();
                 for (String path : pathList) {
                    String url = PAGE_SCHEME_HOST + path;
-                    builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
+                    System.out.println("hql initCodeBlock 444 urlP:"+url);
+                    builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerPage.remark());
                 }
             }else if(uri instanceof RouterRegex){
-                RouterRegex routerUri = (RouterRegex) uri;
-                builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), routerUri.regex(),routerUri.remark());
+                RouterRegex routerRegex = (RouterRegex) uri;
+                builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), routerRegex.regex(),routerRegex.remark());
             }
 
         }
@@ -108,7 +113,7 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
         return builder;
     }
 
-    public void buildHandlerHandlerClass(CodeBlock code, String genClassName,ClassName type) {
+    public void buildHandlerClass(CodeBlock code, String genClassName, ClassName type) {
 
         // List类型
         ClassName list = ClassName.get("java.util", "List");
@@ -163,6 +168,11 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
 
     @Override
     public Set<String> getSupportedAnnotationTypes() {
-        return new HashSet<>(Collections.singletonList(RouterUri.class.getName()));
+        LinkedHashSet<String> annotations = new LinkedHashSet<>();
+        annotations.add(RouterPage.class.getName());
+        annotations.add(RouterUri.class.getName());
+        annotations.add(RouterRegex.class.getName());
+        System.out.println("hql annotations="+annotations.toString());
+        return annotations;
     }
 }

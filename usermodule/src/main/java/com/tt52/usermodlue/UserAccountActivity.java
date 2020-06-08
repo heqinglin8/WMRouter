@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
+import com.sankuai.waimai.router.annotation.RouterPage;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.tt.lib.advanced.services.DemoServiceManager;
 import com.tt.lib.app.BaseActivity;
@@ -16,7 +17,9 @@ import com.tt52.usermodlue.interceptor.LoginInterceptor;
  *
  * Created by jzj on 2018/3/19.
  */
-@RouterUri(path = DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
+//@RouterUri(path = DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
+//        interceptors = LoginInterceptor.class)
+@RouterPage(path = DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
         interceptors = LoginInterceptor.class)
 public class UserAccountActivity extends BaseActivity {
 

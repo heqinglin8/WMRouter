@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
+import com.sankuai.waimai.router.annotation.RouterPage;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.tt.lib.ToastUtils;
 import com.tt.lib.advanced.services.DemoServiceManager;
@@ -16,7 +17,8 @@ import com.tt.lib.app.DemoConstant;
  *
  * Created by jzj on 2018/3/19.
  */
-@RouterUri(path = DemoConstant.LOGIN)
+//@RouterUri(path = DemoConstant.LOGIN)
+@RouterPage(path = DemoConstant.LOGIN)
 public class LoginActivity extends BaseActivity {
 
     @Override
