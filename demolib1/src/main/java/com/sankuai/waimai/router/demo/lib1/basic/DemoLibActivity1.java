@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.lib1.R;
 import com.sankuai.waimai.router.generated.RouterHandler;
@@ -25,6 +26,8 @@ public class DemoLibActivity1 extends BaseActivity {
 
         TextView send = findViewById(R.id.send);
         TextView sendipc = findViewById(R.id.sendipc);
+        TextView list = findViewById(R.id.list);
+        list.setText("有多少url："+RouterHandler.instance.mUrlModes.size());
         send.setOnClickListener(new View.OnClickListener(){
 
             @Override

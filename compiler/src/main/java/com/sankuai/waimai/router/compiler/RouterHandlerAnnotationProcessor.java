@@ -34,7 +34,7 @@ import javax.lang.model.element.TypeElement;
 public class RouterHandlerAnnotationProcessor extends BaseProcessor {
 
     public static final String ROUTER_HANDLER_CLASS_NAME = "RouterHandler";
-    public static final String ROUTER_MODE_CLASS_NAME = "RouterMode";
+    public static final String URL_MODE_CLASS_NAME = "UriMode";
     public static final String ROUTER_HANDLER_CLASS = Const.GEN_PKG+".RouterHandler";
     public static final String SCHEME = "wm_router";
     public static final String HOST = "page";
@@ -46,7 +46,7 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
             return false;
         }
         // list泛型的类型
-        ClassName type = ClassName.get(ROUTER_HANDLER_CLASS, ROUTER_MODE_CLASS_NAME);
+        ClassName type = ClassName.get(ROUTER_HANDLER_CLASS, URL_MODE_CLASS_NAME);
 
         CodeBlock.Builder builder = initCodeBlock(env,RouterUri.class,type);
         buildHandlerHandlerClass(builder.build(), ROUTER_HANDLER_CLASS_NAME,type);
@@ -89,18 +89,18 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
                             url = routerUri.scheme()+"://" + url;
                         }
                     }
-                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
+                    builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
                 }
             }else if(uri instanceof RouterPage){
                 RouterPage routerUri = (RouterPage) uri;
                 String[] pathList = routerUri.path();
                 for (String path : pathList) {
                    String url = PAGE_SCHEME_HOST + path;
-                    builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
+                    builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), url,routerUri.remark());
                 }
             }else if(uri instanceof RouterRegex){
                 RouterRegex routerUri = (RouterRegex) uri;
-                builder.addStatement("routerModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), routerUri.regex(),routerUri.remark());
+                builder.addStatement("mUrlModes.add(new $T($S,$S,$S))",type, cls.getSimpleName(), routerUri.regex(),routerUri.remark());
             }
 
         }
@@ -114,23 +114,24 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
         ClassName list = ClassName.get("java.util", "List");
         // ArrayList类型
         ClassName arrayList = ClassName.get("java.util", "ArrayList");
+        ClassName instance = ClassName.get(Const.GEN_PKG, ROUTER_HANDLER_CLASS_NAME);
         // 生成泛型类型，类型的名称、参数的名称
         TypeName listType = ParameterizedTypeName.get(list, type);
         TypeName arrayListType = ParameterizedTypeName.get(arrayList, type);
 
-        MethodSpec methodSpec = MethodSpec.methodBuilder(Const.INIT_METHOD)
-                .addModifiers(Modifier.PUBLIC)
-                .returns(TypeName.VOID)
+        MethodSpec methodSpec = MethodSpec.constructorBuilder()
+                .addModifiers(Modifier.PRIVATE)
                 .addCode(code)
                 .build();
 
-        FieldSpec fieldSpec = FieldSpec.builder(listType, "routerModes", Modifier.STATIC)
-                .addModifiers(Modifier.PUBLIC)
-                .initializer("new $T()", arrayListType).build();
+        FieldSpec routerModesFieldSpec = FieldSpec.builder(listType, "mUrlModes", Modifier.PUBLIC).initializer("new $T()", arrayListType).build();
+        FieldSpec instanceFieldSpec = FieldSpec.builder(instance, "instance", Modifier.PUBLIC).addModifiers(Modifier.STATIC)
+                .initializer("new "+ROUTER_HANDLER_CLASS_NAME+"()").build();
         TypeSpec typeSpec = TypeSpec.classBuilder(genClassName)
                 .addModifiers(Modifier.PUBLIC)
                 .addMethod(methodSpec)
-                .addField(fieldSpec)
+                .addField(routerModesFieldSpec)
+                .addField(instanceFieldSpec)
                 .addType(buildRouterModeTypeSpec())
                 .build();
         try {
@@ -143,7 +144,7 @@ public class RouterHandlerAnnotationProcessor extends BaseProcessor {
     }
 
     private TypeSpec buildRouterModeTypeSpec() {
-        TypeSpec inTypeSpec = TypeSpec.classBuilder(ROUTER_MODE_CLASS_NAME)
+        TypeSpec inTypeSpec = TypeSpec.classBuilder(URL_MODE_CLASS_NAME)
                 .addModifiers(Modifier.PUBLIC)
                 .addField(String.class,"url",Modifier.PRIVATE)
                 .addField(String.class,"name",Modifier.PRIVATE)
