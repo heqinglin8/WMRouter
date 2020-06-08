@@ -17,8 +17,6 @@ import com.tt52.usermodlue.interceptor.LoginInterceptor;
  *
  * Created by jzj on 2018/3/19.
  */
-//@RouterUri(path = DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
-//        interceptors = LoginInterceptor.class)
 @RouterPage(path = DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
         interceptors = LoginInterceptor.class)
 public class UserAccountActivity extends BaseActivity {

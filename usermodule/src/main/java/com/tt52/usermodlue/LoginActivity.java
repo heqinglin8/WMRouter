@@ -17,7 +17,6 @@ import com.tt.lib.app.DemoConstant;
  *
  * Created by jzj on 2018/3/19.
  */
-//@RouterUri(path = DemoConstant.LOGIN)
 @RouterPage(path = DemoConstant.LOGIN)
 public class LoginActivity extends BaseActivity {
 
