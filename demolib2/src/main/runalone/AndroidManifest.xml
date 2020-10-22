@@ -5,11 +5,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/host_app_name"
         android:name="com.sankuai.waimai.router.demo.lib2.Demolib2ModuleApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/host_AppTheme">
 
         <activity android:name="com.sankuai.waimai.router.demo.lib2.basic.DemoLibActivity2">
             <intent-filter>

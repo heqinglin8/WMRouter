@@ -68,7 +68,7 @@ public class WMRouterTransform extends Transform {
 
     @Override
     public void transform(TransformInvocation invocation) {
-        WMRouterLogger.info(TRANSFORM + "start...");
+        WMRouterLogger.info(TRANSFORM + "start... hql");
         long ms = System.currentTimeMillis();
         Set<String> initClasses = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
@@ -170,7 +170,7 @@ public class WMRouterTransform extends Transform {
         }
 
         try {
-            WMRouterLogger.info(GENERATE_INIT + "start...");
+            WMRouterLogger.info(GENERATE_INIT + "start... hql");
             long ms = System.currentTimeMillis();
 
             ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
@@ -199,7 +199,7 @@ public class WMRouterTransform extends Transform {
             dest.getParentFile().mkdirs();
             new FileOutputStream(dest).write(writer.toByteArray());
 
-            WMRouterLogger.info(GENERATE_INIT + "cost %s ms", System.currentTimeMillis() - ms);
+            WMRouterLogger.info(GENERATE_INIT + "cost %s ms file:%s", System.currentTimeMillis() - ms,dest.getAbsoluteFile().toString());
 
         } catch (IOException e) {
             WMRouterLogger.fatal(e);

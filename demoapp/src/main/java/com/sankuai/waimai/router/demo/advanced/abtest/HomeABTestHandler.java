@@ -19,5 +19,6 @@ public class HomeABTestHandler extends AbsActivityHandler {
         } else {
             return new Intent(request.getContext(), HomeActivityB.class);
         }
+
     }
 }

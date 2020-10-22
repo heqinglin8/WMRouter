@@ -16,7 +16,7 @@ public class WMRouterPlugin implements Plugin<Project> {
         WMRouterExtension extension = project.getExtensions()
                 .create(Const.NAME, WMRouterExtension.class);
 
-        WMRouterLogger.info("register transform");
+        WMRouterLogger.info("register transform hql");
         project.getExtensions().findByType(BaseExtension.class)
                 .registerTransform(new WMRouterTransform());
 

@@ -5,6 +5,7 @@ buildscript {
     ext.kotlin_version = '1.3.40'
     repositories {
         mavenLocal()
+        maven { url 'file:///Users/heqinglin/work/share/repo' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         maven { url 'https://maven.google.com/' }
         maven { url 'https://www.jitpack.io' }
@@ -26,6 +27,7 @@ buildscript {
 allprojects {
     repositories {
         mavenLocal()
+        maven { url 'file:///Users/heqinglin/work/share/repo' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         maven { url 'https://maven.google.com/' }
         maven { url 'https://www.jitpack.io' }

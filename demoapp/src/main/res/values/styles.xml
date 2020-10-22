@@ -1,16 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="host_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="buttonStyle">@style/Button</item>
-        <item name="android:buttonStyle">@style/Button</item>
+        <item name="buttonStyle">@style/host_Button</item>
+        <item name="android:buttonStyle">@style/host_Button</item>
     </style>
 
-    <style name="Button" parent="Widget.AppCompat.Button.Borderless.Colored">
+    <style name="host_Button" parent="Widget.AppCompat.Button.Borderless.Colored">
         <item name="android:elevation" tools:ignore="NewApi">0dp</item>
         <item name="android:background">@drawable/host_button</item>
         <item name="android:textColor">#333</item>

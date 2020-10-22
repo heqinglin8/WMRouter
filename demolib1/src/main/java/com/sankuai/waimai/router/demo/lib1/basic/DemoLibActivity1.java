@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.lib1.R;
-import com.sankuai.waimai.router.generated.RouterHandler;
 import com.tt.lib.app.BaseActivity;
 import com.tt.lib.app.DemoConstant;
 import com.tt52.demolib2_export.Demolib2EventsManager;
@@ -27,7 +26,7 @@ public class DemoLibActivity1 extends BaseActivity {
         TextView send = findViewById(R.id.send);
         TextView sendipc = findViewById(R.id.sendipc);
         TextView list = findViewById(R.id.list);
-        list.setText("有多少url："+RouterHandler.instance.mUrlModes.size());
+//        list.setText("有多少url："+RouterHandler.instance.mUrlModes.size());
         send.setOnClickListener(new View.OnClickListener(){
 
             @Override
