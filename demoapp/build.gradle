@@ -58,5 +58,5 @@ dependencies {
         api project(path: ':usermodule')
     }
     //加入Flutter的依赖
-//    implementation project(':flutter')
+    implementation project(':flutter')
 }
