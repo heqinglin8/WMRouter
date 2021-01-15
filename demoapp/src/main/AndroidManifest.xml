@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.sankuai.waimai.router.demo">
+    package="com.quwan.tt.router.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.sankuai.waimai.router.demo.app.DemoApplication"
+        android:name="com.quwan.tt.router.demo.app.DemoApplication"
         android:allowBackup="false"
         android:icon="@mipmap/host_ic_launcher"
         android:label="@string/host_app_name"
@@ -15,7 +15,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".app.UriProxyActivity"
+            android:name="com.quwan.tt.router.demo.app.UriProxyActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -29,23 +29,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".basic.MainActivity">
+        <activity android:name="com.quwan.tt.router.demo.basic.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basic.TestBasicActivity" />
-        <activity android:name=".basic.TestUriRequestActivity" />
-        <activity android:name=".basic.ExportedActivity" />
-        <activity android:name=".basic.NotExportedActivity" />
-        <activity android:name=".advanced.AdvancedDemoActivity" />
-        <activity android:name=".advanced.location.NearbyShopActivity" />
-        <activity android:name=".advanced.webview.WebViewActivity" />
-        <activity android:name=".advanced.abtest.HomeActivityA" />
-        <activity android:name=".advanced.abtest.HomeActivityB" />
-        <activity android:name=".fragment.FragmentDemoActivity" />
-        <activity android:name=".fragment2fragment.FragmentToFragmentDemoActivity"/>
+        <activity android:name="com.quwan.tt.router.demo.basic.TestBasicActivity" />
+        <activity android:name="com.quwan.tt.router.demo.basic.TestUriRequestActivity" />
+        <activity android:name="com.quwan.tt.router.demo.basic.ExportedActivity" />
+        <activity android:name="com.quwan.tt.router.demo.basic.NotExportedActivity" />
+        <activity android:name="com.quwan.tt.router.demo.advanced.AdvancedDemoActivity" />
+        <activity android:name="com.quwan.tt.router.demo.advanced.location.NearbyShopActivity" />
+        <activity android:name="com.quwan.tt.router.demo.advanced.webview.WebViewActivity" />
+        <activity android:name="com.quwan.tt.router.demo.advanced.abtest.HomeActivityA" />
+        <activity android:name="com.quwan.tt.router.demo.advanced.abtest.HomeActivityB" />
+        <activity android:name="com.quwan.tt.router.demo.fragment.FragmentDemoActivity" />
+        <activity android:name="com.quwan.tt.router.demo.fragment2fragment.FragmentToFragmentDemoActivity"/>
 
 <!--        <activity-->
 <!--            android:name="io.flutter.embedding.android.FlutterActivity"-->

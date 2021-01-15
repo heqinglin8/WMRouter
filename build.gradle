@@ -6,6 +6,8 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url 'file:///Users/heqinglin/work/share/repo' }
+        maven { url 'http://192.168.8.184:8081/repository/android-private/' }
+//        maven { url 'http://192.168.8.184:8081/repository/android-snapshots/' }
 //        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         google()
         maven { url 'https://www.jitpack.io' }
@@ -19,8 +21,10 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
-//        classpath "com.sankuai.waimai.router:plugin:1.1.0"
-        classpath "com.sankuai.waimai.router:plugin:$VERSION_NAME"
+//        classpath "com.sankuai.waimai.router:plugin:1.2.0"
+//        classpath "com.sankuai.waimai.router:plugin:$VERSION_NAME"
+//        classpath "com.quwan.tt.router:plugin:1.2.0"
+        classpath "com.quwan.tt.router:plugin:$VERSION_NAME"
     }
 }
 
@@ -28,6 +32,8 @@ allprojects {
     repositories {
         mavenLocal()
         maven { url 'file:///Users/heqinglin/work/share/repo' }
+        maven { url 'http://192.168.8.184:8081/repository/android-private/' }
+//        maven { url 'http://192.168.8.184:8081/repository/android-snapshots/' }
 //        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         google()
         maven { url 'https://www.jitpack.io' }

@@ -3,9 +3,9 @@ package com.tt52.usermodlue.services;
 import android.content.Context;
 import androidx.annotation.NonNull;;
 
-import com.sankuai.waimai.router.Router;
-import com.sankuai.waimai.router.annotation.RouterProvider;
-import com.sankuai.waimai.router.annotation.RouterService;
+import com.quwan.tt.router.Router;
+import com.quwan.tt.router.annotation.RouterProvider;
+import com.quwan.tt.router.annotation.RouterService;
 import com.tt.lib.advanced.services.IAccountService;
 import com.tt.lib.app.DemoConstant;
 

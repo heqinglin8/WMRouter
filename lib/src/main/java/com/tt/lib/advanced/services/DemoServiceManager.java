@@ -1,6 +1,6 @@
 package com.tt.lib.advanced.services;
 
-import com.sankuai.waimai.router.Router;
+import com.quwan.tt.router.Router;
 import com.tt.lib.app.DemoConstant;
 
 /**

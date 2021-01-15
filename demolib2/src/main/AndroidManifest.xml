@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sankuai.waimai.router.demo.lib2">
+          package="com.quwan.tt.router.demo.lib2">
     <application>
-        <activity android:name=".basic.DemoLibActivity2"/>
-        <activity android:name=".advanced.ServiceLoaderActivity"/>
+        <activity android:name="com.quwan.tt.router.demo.lib2.basic.DemoLibActivity2"/>
+        <activity android:name="com.quwan.tt.router.demo.lib2.advanced.ServiceLoaderActivity"/>
         <service
-            android:name="com.sankuai.waimai.router.demo.lib2.service.IpcService"
+            android:name="com.quwan.tt.router.demo.lib2.service.IpcService"
             android:process=":ipcTest">
         </service>
     </application>

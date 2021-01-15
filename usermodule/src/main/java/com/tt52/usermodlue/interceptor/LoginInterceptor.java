@@ -3,10 +3,10 @@ package com.tt52.usermodlue.interceptor;
 import androidx.annotation.NonNull;;
 import android.widget.Toast;
 
-import com.sankuai.waimai.router.core.UriCallback;
-import com.sankuai.waimai.router.core.UriInterceptor;
-import com.sankuai.waimai.router.core.UriRequest;
-import com.sankuai.waimai.router.core.UriResult;
+import com.quwan.tt.router.core.UriCallback;
+import com.quwan.tt.router.core.UriInterceptor;
+import com.quwan.tt.router.core.UriRequest;
+import com.quwan.tt.router.core.UriResult;
 import com.tt.lib.CustomUriResult;
 import com.tt.lib.advanced.services.DemoServiceManager;
 import com.tt.lib.advanced.services.IAccountService;

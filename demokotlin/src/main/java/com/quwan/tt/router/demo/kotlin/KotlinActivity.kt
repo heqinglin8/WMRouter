@@ -1,0 +1,22 @@
+package com.quwan.tt.router.demo.kotlin
+
+import android.annotation.SuppressLint
+import android.os.Bundle
+import android.widget.TextView
+import com.quwan.tt.router.Router
+import com.quwan.tt.router.annotation.RouterUri
+import com.tt.lib.app.BaseActivity
+import com.tt.lib.app.DemoConstant
+
+@RouterUri(path = [DemoConstant.KOTLIN])
+class KotlinActivity : BaseActivity() {
+
+    @SuppressLint("SetTextI18n")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val a = Router.callMethod(DemoConstant.ADD_METHOD, 2, 3) as Int
+        val txt = TextView(this)
+        txt.text = "Kotlin模块调用Java模块的Service：\n2 + 3 = " + a.toString()
+        setContentView(txt)
+    }
+}

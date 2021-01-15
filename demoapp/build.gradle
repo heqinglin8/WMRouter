@@ -12,7 +12,7 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.sankuai.waimai.router.demo"
+        applicationId "com.quwan.tt.router.demo"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1

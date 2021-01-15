@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sankuai.waimai.router.demo.kotlin">
+    package="com.quwan.tt.router.demo.kotlin">
 
     <application>
-        <activity android:name=".KotlinActivity"/>
+        <activity android:name="com.quwan.tt.router.demo.kotlin.KotlinActivity"/>
     </application>
 
 </manifest>

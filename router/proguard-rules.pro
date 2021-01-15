@@ -21,7 +21,7 @@
 #-renamesourcefileattribute SourceFile
 
 # 保留ServiceLoaderInit类，由反射调用
--keep class com.sankuai.waimai.router.generated.ServiceLoaderInit { *; }
+-keep class com.quwan.tt.router.generated.ServiceLoaderInit { *; }
 
 # 避免注解在shrink阶段就被移除，导致obfuscate阶段注解失效、实现类仍然被混淆
--keep @interface com.sankuai.waimai.router.annotation.RouterService
+-keep @interface com.quwan.tt.router.annotation.RouterService

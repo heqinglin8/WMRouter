@@ -177,7 +177,7 @@ WMRouter还提供了ServiceLoader模块。
         jcenter()
     }
     dependencies {
-        compile 'com.sankuai.waimai.router:router:1.x'
+        compile 'com.quwan.tt.router:router:1.x'
     }
     ```
 
@@ -190,7 +190,7 @@ WMRouter还提供了ServiceLoader模块。
         jcenter()
     }
     dependencies {
-        annotationProcessor 'com.sankuai.waimai.router:compiler:1.x'
+        annotationProcessor 'com.quwan.tt.router:compiler:1.x'
     }
     ```
 
@@ -207,7 +207,7 @@ WMRouter还提供了ServiceLoader模块。
         jcenter()
     }
     dependencies {
-        kapt 'com.sankuai.waimai.router:compiler:1.x'
+        kapt 'com.quwan.tt.router:compiler:1.x'
     }
     ```
 
@@ -224,14 +224,14 @@ WMRouter还提供了ServiceLoader模块。
             // Android Gradle插件
             classpath 'com.android.tools.build:gradle:3.2.1'
             // 添加WMRouter插件
-            classpath "com.sankuai.waimai.router:plugin:1.x"
+            classpath "com.quwan.tt.router:plugin:1.x"
         }
     }
     ```
 
     > 注意：如果项目配置的Android Gradle插件版本比WMRouter依赖的版本低，默认会覆盖为高版本（可通过`./gradlew buildEnvironment`命令查看classpath的依赖关系）。如果不希望被覆盖，可以尝试把配置改成：
     > ```groovy
-    > classpath("com.sankuai.waimai.router:plugin:1.x") {
+    > classpath("com.quwan.tt.router:plugin:1.x") {
     >     exclude group: 'com.android.tools.build'
     > }
     > ```
@@ -250,17 +250,17 @@ WMRouter还提供了ServiceLoader模块。
 
     ```bash
     # 保留ServiceLoaderInit类，需要反射调用
-    -keep class com.sankuai.waimai.router.generated.ServiceLoaderInit { *; }
+    -keep class com.quwan.tt.router.generated.ServiceLoaderInit { *; }
 
     # 避免注解在shrink阶段就被移除，导致obfuscate阶段注解失效、实现类仍然被混淆
-    -keep @interface com.sankuai.waimai.router.annotation.RouterService
+    -keep @interface com.quwan.tt.router.annotation.RouterService
     ```
 
     如果使用了`@RouterService`注解和ServiceLoader加载实例的功能，会反射调用构造方法，应根据实际情况配置Proguard，避免实现类中的构造方法被移除，示例如下。
 
     ```bash
     # 使用了RouterService注解的实现类，需要避免Proguard把构造方法、方法等成员移除(shrink)或混淆(obfuscate)，导致无法反射调用。实现类的类名可以混淆。
-    -keepclassmembers @com.sankuai.waimai.router.annotation.RouterService class * { *; }
+    -keepclassmembers @com.quwan.tt.router.annotation.RouterService class * { *; }
     ```
 
 
@@ -875,7 +875,7 @@ assets是否正确生成。Gradle插件会将注解生成器生成的资源文�
 
 #### 1.1.x及以上版本
 
-查看Gradle编译输出的Log，是否正确找到了注解生成器生成的初始化类；反编译APK查看`com.sankuai.waimai.router.generated.ServiceLoaderInit`类中的内容是否正常。
+查看Gradle编译输出的Log，是否正确找到了注解生成器生成的初始化类；反编译APK查看`com.quwan.tt.router.generated.ServiceLoaderInit`类中的内容是否正常。
 
 ![](images/debug-check-plugin-find-service.png)
 

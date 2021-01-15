@@ -5,8 +5,7 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
-import com.sankuai.waimai.router.annotation.RouterPage;
-import com.sankuai.waimai.router.annotation.RouterUri;
+import com.quwan.tt.router.annotation.RouterPage;
 import com.tt.lib.ToastUtils;
 import com.tt.lib.advanced.services.DemoServiceManager;
 import com.tt.lib.app.BaseActivity;
