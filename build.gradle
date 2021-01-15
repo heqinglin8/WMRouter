@@ -6,8 +6,8 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url 'file:///Users/heqinglin/work/share/repo' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-        maven { url 'https://maven.google.com/' }
+//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        google()
         maven { url 'https://www.jitpack.io' }
         jcenter()
         mavenCentral()
@@ -28,8 +28,8 @@ allprojects {
     repositories {
         mavenLocal()
         maven { url 'file:///Users/heqinglin/work/share/repo' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-        maven { url 'https://maven.google.com/' }
+//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        google()
         maven { url 'https://www.jitpack.io' }
         jcenter()
         mavenCentral()

@@ -20,6 +20,7 @@ def support = [:]
 support.annotations = "androidx.annotation:annotation:1.0.0"
 support.app_compat = "androidx.appcompat:appcompat:1.1.0"
 support.v4 = "androidx.legacy:legacy-support-v4:1.0.0"
+support.v13 = "androidx.legacy:legacy-support-v13:1.0.0"
 deps.support = support
 
 def moduleevent = [:]

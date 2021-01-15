@@ -43,7 +43,7 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api deps.support.app_compat
+    implementation deps.support.app_compat
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -58,5 +58,5 @@ dependencies {
         api project(path: ':usermodule')
     }
     //加入Flutter的依赖
-    implementation project(':flutter')
+//    implementation project(':flutter')
 }

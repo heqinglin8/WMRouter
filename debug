@@ -17,6 +17,6 @@
 # 5. 编译demoapp模块时，会优先使用MavenLocal中的最新插件代码。
 # 6. 测试完成后，把build.gradle再改回来。
 
-export GRADLE_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+export GRADLE_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5006"
 ./gradlew clean :demoapp:assembleDebug -Dorg.gradle.daemon=false
 unset GRADLE_OPTS

@@ -3,10 +3,11 @@ include ':export:demolib1-export'
 include ':export:demolib2-export'
 include ':usermodule'
 
-setBinding(new Binding([gradle: this]))                                // new
-evaluate(new File(                                                     // new
-        settingsDir,                                       // new
-        'flutter_module/.android/include_flutter.groovy'                         // new
-))
-
-include ':flutter_module'
+//暂时先注释flutter相关的配置
+//setBinding(new Binding([gradle: this]))                                // new
+//evaluate(new File(                                                     // new
+//        settingsDir,                                       // new
+//        'flutter_module/.android/include_flutter.groovy'                         // new
+//))
+//
+//include ':flutter_module'
