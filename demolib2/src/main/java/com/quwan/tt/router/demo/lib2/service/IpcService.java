@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer;
 
 import android.widget.Toast;
 
-import com.tt52.demolib2_export.Demolib2EventsManager;
+//import com.tt52.demolib2_export.Demolib2EventsManager;
 
 /**
  * Created by liaohailiang on 2019/3/26.
@@ -18,8 +18,8 @@ public class IpcService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Demolib2EventsManager.EVENT3().observeForever(observer2);
-        Demolib2EventsManager.EVENT3().postAcrossApp("准备就绪！");
+//        Demolib2EventsManager.EVENT3().observeForever(observer2);
+//        Demolib2EventsManager.EVENT3().postAcrossApp("准备就绪！");
     }
 
     @Override
